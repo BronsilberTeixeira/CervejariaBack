@@ -1,5 +1,6 @@
 ﻿using Cervejaria.Models;
 using Cervejaria.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cervejaria.Controllers
@@ -16,21 +17,23 @@ namespace Cervejaria.Controllers
         }
 
         [HttpGet]
+        [AllowAnonymous]
         public async Task<IEnumerable<Cerveja>> GetCerveja()
         {
             return await _cervejaRepository.Get();
         }
-        [HttpGet("{id}")]
 
+        [HttpGet("{id}")]
         public async Task<ActionResult<Cerveja>> GetCervejas(int id)
         {
             return await _cervejaRepository.Get(id);
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public async Task<ActionResult<Cerveja>> PostCerveja([FromBody] Cerveja cerveja)
         {
-            var newBook = await _cervejaRepository.Create(cerveja);
+            var novaCerveja = await _cervejaRepository.Create(cerveja);
             return cerveja;
         }
 

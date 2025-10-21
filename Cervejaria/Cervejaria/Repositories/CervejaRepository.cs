@@ -14,14 +14,15 @@ namespace Cervejaria.Repositories
         }
         public async Task<Cerveja> Create(Cerveja cerveja)
         {
-           await _context.SaveChangesAsync();
+            _context.Cervejas.Add(cerveja);
+            await _context.SaveChangesAsync();
             return cerveja;
         }
 
         public async Task Delete(int id)
         {
-            var bookDelete = await _context.Cervejas.FindAsync(id);
-            _context.Cervejas.Remove(bookDelete);
+            var cervejaDelete = await _context.Cervejas.FindAsync(id);
+            _context.Cervejas.Remove(cervejaDelete);
             await _context.SaveChangesAsync();
         }
 
