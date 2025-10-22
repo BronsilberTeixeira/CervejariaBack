@@ -203,7 +203,7 @@
   {
     "ContainingType": "Cervejaria.Controllers.UsuarioController",
     "Method": "ExcluirUsuario",
-    "RelativePath": "Api/Usuario/Usuario/EditarUsuario",
+    "RelativePath": "Api/Usuario/Usuario/ExcluirUsuario",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,

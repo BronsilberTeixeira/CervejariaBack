@@ -1,4 +1,5 @@
 ﻿using Cervejaria.Models;
+using Cervejaria.Models.Enuns;
 using Cervejaria.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -26,14 +27,14 @@ namespace Cervejaria.Controllers {
             return await _usuarioRepository.PegarTodosUsuarios();
         }
 
-        [HttpGet("pegarUsuario/{email}/{senha}")]
+        [HttpGet("pegarUsuario")]
         [AllowAnonymous]
-        public async Task<ActionResult<Usuario>> GetUsuario(string email, string senha)
+        public async Task<ActionResult<Usuario>> GetUsuario([FromBody] LoginUserEnum loginUser)
         {
-            var senhaCriptografada = HashSenha(senha);
+            var senhaCriptografada = HashSenha(loginUser.senha);
 
             // 🔍 Busca o usuário no banco
-            var usuario = await _usuarioRepository.ValidarUsuario(email, senhaCriptografada);
+            var usuario = await _usuarioRepository.ValidarUsuario(loginUser.email, senhaCriptografada);
 
             if (usuario == null) 
             {

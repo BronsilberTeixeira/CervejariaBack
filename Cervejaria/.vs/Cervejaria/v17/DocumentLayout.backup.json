@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\bron\\source\\repos\\BronsilberTeixeira\\CervejariaBack\\Cervejaria\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{74DEB42A-F43C-4B19-A4F8-DE19359761E0}|Cervejaria\\Cervejaria.csproj|c:\\users\\bron\\source\\repos\\bronsilberteixeira\\cervejariaback\\cervejaria\\cervejaria\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74DEB42A-F43C-4B19-A4F8-DE19359761E0}|Cervejaria\\Cervejaria.csproj|solutionrelative:cervejaria\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74DEB42A-F43C-4B19-A4F8-DE19359761E0}|Cervejaria\\Cervejaria.csproj|c:\\users\\bron\\source\\repos\\bronsilberteixeira\\cervejariaback\\cervejaria\\cervejaria\\models\\enuns\\loginuserenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74DEB42A-F43C-4B19-A4F8-DE19359761E0}|Cervejaria\\Cervejaria.csproj|solutionrelative:cervejaria\\models\\enuns\\loginuserenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74DEB42A-F43C-4B19-A4F8-DE19359761E0}|Cervejaria\\Cervejaria.csproj|c:\\users\\bron\\source\\repos\\bronsilberteixeira\\cervejariaback\\cervejaria\\cervejaria\\controllers\\cervejacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74DEB42A-F43C-4B19-A4F8-DE19359761E0}|Cervejaria\\Cervejaria.csproj|solutionrelative:cervejaria\\controllers\\cervejacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74DEB42A-F43C-4B19-A4F8-DE19359761E0}|Cervejaria\\Cervejaria.csproj|c:\\users\\bron\\source\\repos\\bronsilberteixeira\\cervejariaback\\cervejaria\\cervejaria\\context\\cervejariacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74DEB42A-F43C-4B19-A4F8-DE19359761E0}|Cervejaria\\Cervejaria.csproj|solutionrelative:cervejaria\\context\\cervejariacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{74DEB42A-F43C-4B19-A4F8-DE19359761E0}|Cervejaria\\Cervejaria.csproj|c:\\users\\bron\\source\\repos\\bronsilberteixeira\\cervejariaback\\cervejaria\\cervejaria\\repositories\\icervejarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{74DEB42A-F43C-4B19-A4F8-DE19359761E0}|Cervejaria\\Cervejaria.csproj|solutionrelative:cervejaria\\repositories\\icervejarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,23 +35,11 @@
       "RelativeMoniker": "D:0:0:{74DEB42A-F43C-4B19-A4F8-DE19359761E0}|Cervejaria\\Cervejaria.csproj|solutionrelative:cervejaria\\repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74DEB42A-F43C-4B19-A4F8-DE19359761E0}|Cervejaria\\Cervejaria.csproj|c:\\users\\bron\\source\\repos\\bronsilberteixeira\\cervejariaback\\cervejaria\\cervejaria\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74DEB42A-F43C-4B19-A4F8-DE19359761E0}|Cervejaria\\Cervejaria.csproj|solutionrelative:cervejaria\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{74DEB42A-F43C-4B19-A4F8-DE19359761E0}|Cervejaria\\Cervejaria.csproj|c:\\users\\bron\\source\\repos\\bronsilberteixeira\\cervejariaback\\cervejaria\\cervejaria\\controllers\\cervejacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74DEB42A-F43C-4B19-A4F8-DE19359761E0}|Cervejaria\\Cervejaria.csproj|solutionrelative:cervejaria\\controllers\\cervejacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{74DEB42A-F43C-4B19-A4F8-DE19359761E0}|Cervejaria\\Cervejaria.csproj|c:\\users\\bron\\source\\repos\\bronsilberteixeira\\cervejariaback\\cervejaria\\cervejaria\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{74DEB42A-F43C-4B19-A4F8-DE19359761E0}|Cervejaria\\Cervejaria.csproj|solutionrelative:cervejaria\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\bron\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.1\\build\\Microsoft.Extensions.ApiDescription.Server.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{74DEB42A-F43C-4B19-A4F8-DE19359761E0}|Cervejaria\\Cervejaria.csproj|c:\\users\\bron\\source\\repos\\bronsilberteixeira\\cervejariaback\\cervejaria\\cervejaria\\context\\cervejariacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74DEB42A-F43C-4B19-A4F8-DE19359761E0}|Cervejaria\\Cervejaria.csproj|solutionrelative:cervejaria\\context\\cervejariacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -45,11 +49,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "LoginUserEnum.cs",
+              "DocumentMoniker": "C:\\Users\\bron\\source\\repos\\BronsilberTeixeira\\CervejariaBack\\Cervejaria\\Cervejaria\\Models\\Enuns\\LoginUserEnum.cs",
+              "RelativeDocumentMoniker": "Cervejaria\\Models\\Enuns\\LoginUserEnum.cs",
+              "ToolTip": "C:\\Users\\bron\\source\\repos\\BronsilberTeixeira\\CervejariaBack\\Cervejaria\\Cervejaria\\Models\\Enuns\\LoginUserEnum.cs",
+              "RelativeToolTip": "Cervejaria\\Models\\Enuns\\LoginUserEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T22:47:30.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ICervejaRepository.cs",
               "DocumentMoniker": "C:\\Users\\bron\\source\\repos\\BronsilberTeixeira\\CervejariaBack\\Cervejaria\\Cervejaria\\Repositories\\ICervejaRepository.cs",
               "RelativeDocumentMoniker": "Cervejaria\\Repositories\\ICervejaRepository.cs",
@@ -62,20 +79,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "CervejaController.cs",
               "DocumentMoniker": "C:\\Users\\bron\\source\\repos\\BronsilberTeixeira\\CervejariaBack\\Cervejaria\\Cervejaria\\Controllers\\CervejaController.cs",
               "RelativeDocumentMoniker": "Cervejaria\\Controllers\\CervejaController.cs",
               "ToolTip": "C:\\Users\\bron\\source\\repos\\BronsilberTeixeira\\CervejariaBack\\Cervejaria\\Cervejaria\\Controllers\\CervejaController.cs",
               "RelativeToolTip": "Cervejaria\\Controllers\\CervejaController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowA8AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-22T21:33:18.005Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Microsoft.Extensions.ApiDescription.Server.targets",
               "DocumentMoniker": "C:\\Users\\bron\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.1\\build\\Microsoft.Extensions.ApiDescription.Server.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.1\\build\\Microsoft.Extensions.ApiDescription.Server.targets",
@@ -83,25 +100,24 @@
               "RelativeToolTip": "..\\..\\..\\..\\..\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.1\\build\\Microsoft.Extensions.ApiDescription.Server.targets",
               "ViewState": "AgIAADAAAAAAAAAAAAAIwEEAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2025-10-22T21:34:41.664Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-22T21:34:41.664Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "UsuarioController.cs",
               "DocumentMoniker": "C:\\Users\\bron\\source\\repos\\BronsilberTeixeira\\CervejariaBack\\Cervejaria\\Cervejaria\\Controllers\\UsuarioController.cs",
               "RelativeDocumentMoniker": "Cervejaria\\Controllers\\UsuarioController.cs",
               "ToolTip": "C:\\Users\\bron\\source\\repos\\BronsilberTeixeira\\CervejariaBack\\Cervejaria\\Cervejaria\\Controllers\\UsuarioController.cs",
               "RelativeToolTip": "Cervejaria\\Controllers\\UsuarioController.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAAAHEAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAswB8AAABeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-22T18:39:39.126Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\bron\\source\\repos\\BronsilberTeixeira\\CervejariaBack\\Cervejaria\\Cervejaria\\Program.cs",
               "RelativeDocumentMoniker": "Cervejaria\\Program.cs",
@@ -109,12 +125,11 @@
               "RelativeToolTip": "Cervejaria\\Program.cs",
               "ViewState": "AgIAACsAAAAAAAAAAAAgwCAAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T18:35:24.085Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-22T18:35:24.085Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "CervejariaContext.cs",
               "DocumentMoniker": "C:\\Users\\bron\\source\\repos\\BronsilberTeixeira\\CervejariaBack\\Cervejaria\\Cervejaria\\Context\\CervejariaContext.cs",
               "RelativeDocumentMoniker": "Cervejaria\\Context\\CervejariaContext.cs",
@@ -127,7 +142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "UsuarioRepository.cs",
               "DocumentMoniker": "C:\\Users\\bron\\source\\repos\\BronsilberTeixeira\\CervejariaBack\\Cervejaria\\Cervejaria\\Repositories\\UsuarioRepository.cs",
               "RelativeDocumentMoniker": "Cervejaria\\Repositories\\UsuarioRepository.cs",
@@ -135,12 +150,11 @@
               "RelativeToolTip": "Cervejaria\\Repositories\\UsuarioRepository.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAmwC4AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T18:24:07.993Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-22T18:24:07.993Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "IUsuarioRepository.cs",
               "DocumentMoniker": "C:\\Users\\bron\\source\\repos\\BronsilberTeixeira\\CervejariaBack\\Cervejaria\\Cervejaria\\Repositories\\IUsuarioRepository.cs",
               "RelativeDocumentMoniker": "Cervejaria\\Repositories\\IUsuarioRepository.cs",
@@ -148,12 +162,11 @@
               "RelativeToolTip": "Cervejaria\\Repositories\\IUsuarioRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T18:24:03.809Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-22T18:24:03.809Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "CervejaRepository.cs",
               "DocumentMoniker": "C:\\Users\\bron\\source\\repos\\BronsilberTeixeira\\CervejariaBack\\Cervejaria\\Cervejaria\\Repositories\\CervejaRepository.cs",
               "RelativeDocumentMoniker": "Cervejaria\\Repositories\\CervejaRepository.cs",
@@ -161,8 +174,7 @@
               "RelativeToolTip": "Cervejaria\\Repositories\\CervejaRepository.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T20:48:36.685Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-21T20:48:36.685Z"
             }
           ]
         }
