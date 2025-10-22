@@ -558,3 +558,4 @@ C:\Users\bron\source\repos\BronsilberTeixeira\CervejariaBack\Cervejaria\Cervejar
 C:\Users\bron\source\repos\BronsilberTeixeira\CervejariaBack\Cervejaria\Cervejaria\obj\Debug\net6.0\Cervejaria.genruntimeconfig.cache
 C:\Users\bron\source\repos\BronsilberTeixeira\CervejariaBack\Cervejaria\Cervejaria\obj\Debug\net6.0\ref\Cervejaria.dll
 C:\Users\bron\source\repos\BronsilberTeixeira\CervejariaBack\Cervejaria\Cervejaria\obj\Debug\net6.0\staticwebassets.upToDateCheck.txt
+C:\Users\bron\source\repos\BronsilberTeixeira\CervejariaBack\Cervejaria\Cervejaria\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

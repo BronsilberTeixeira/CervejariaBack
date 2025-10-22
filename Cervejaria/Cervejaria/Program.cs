@@ -1,13 +1,17 @@
-﻿using Microsoft.AspNetCore.Authentication.Negotiate;
+﻿using Cervejaria.Context;
 using Cervejaria.Controllers;
-using Cervejaria.Context;
-using Microsoft.EntityFrameworkCore;
 using Cervejaria.Repositories;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authentication.Negotiate;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 internal class Program
 {
     private static void Main(string[] args)
     {
+        var key = Encoding.ASCII.GetBytes("chave-super-secreta-12345");
         var builder = WebApplication.CreateBuilder(args);
 
         // Add services to the container.
@@ -17,6 +21,7 @@ internal class Program
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
         builder.Services.AddScoped<ICervejaRepository, CervejaRepository>();
+        builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 
         string mySqlConnection = builder.Configuration.GetConnectionString("DefaltConnection");
         builder.Services.AddDbContextPool<CervejariaContext>(options =>
@@ -25,11 +30,22 @@ internal class Program
         builder.Services.AddAuthentication(NegotiateDefaults.AuthenticationScheme)
            .AddNegotiate();
 
-        builder.Services.AddAuthorization(options =>
+        builder.Services.AddAuthentication(options =>
         {
-            // By default, all incoming requests will be authorized according to the default policy.
-            options.FallbackPolicy = options.DefaultPolicy;
-        });
+            options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+            options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+        }).AddJwtBearer(options =>
+        {
+            options.RequireHttpsMetadata = false;
+            options.SaveToken = true;
+            options.TokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateIssuer = false,
+                ValidateAudience = false,
+                ValidateIssuerSigningKey = true,
+                IssuerSigningKey = new SymmetricSecurityKey(key)
+            };
+        }); ;
 
         var app = builder.Build();
 

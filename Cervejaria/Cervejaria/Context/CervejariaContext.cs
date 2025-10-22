@@ -8,6 +8,7 @@ namespace Cervejaria.Context
         public CervejariaContext(DbContextOptions<CervejariaContext> options) : base(options) { }
 
         public DbSet<Cerveja> Cervejas { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
     }
 }
  

@@ -4,10 +4,10 @@ namespace Cervejaria.Repositories
 {
     public interface ICervejaRepository
     {
-        Task<IEnumerable<Cerveja>> Get();
-        Task<Cerveja> Get(int id);
-        Task<Cerveja> Create(Cerveja cerveja);
-        Task Update(Cerveja cerveja);
-        Task Delete(int id);
+        Task<IEnumerable<Cerveja>> PegarTodasCerverjas();
+        Task<Cerveja> PegarCervejaId(int id);
+        Task<Cerveja> CriarCerveja(Cerveja cerveja);
+        Task EditarCerveja(Cerveja cerveja);
+        Task ExcluirCerveja(int id);
     }
 }

@@ -2,6 +2,7 @@
 using Cervejaria.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Cervejaria.Migrations
 {
     [DbContext(typeof(CervejariaContext))]
-    partial class CervejariaContextModelSnapshot : ModelSnapshot
+    [Migration("20251022181353_tableUser")]
+    partial class tableUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -46,29 +48,6 @@ namespace Cervejaria.Migrations
                     b.HasKey("id");
 
                     b.ToTable("Cervejas");
-                });
-
-            modelBuilder.Entity("Cervejaria.Models.Usuario", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Nome")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Senha")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Usuarios");
                 });
 #pragma warning restore 612, 618
         }
