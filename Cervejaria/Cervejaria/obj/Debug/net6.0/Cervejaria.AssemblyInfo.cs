@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Cervejaria")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fe52603d3e422361bd322dd0e3a67ae3595aedd1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c9798feb128925b2cdaa4d4f945709e093ec3b76")]
 [assembly: System.Reflection.AssemblyProductAttribute("Cervejaria")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Cervejaria")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
