@@ -16,28 +16,40 @@ namespace Cervejaria.Controllers
             _cervejaRepository = cervejaRepository;
         }
 
-        [HttpGet("PegarCervejas")]
+        [HttpGet("pegar-todas-cervejas")]
         [AllowAnonymous]
         public async Task<IEnumerable<Cerveja>> GetCerveja()
         {
             return await _cervejaRepository.PegarTodasCerverjas();
         }
 
-        [HttpGet("PegarCerveja/{id}")]
+        [HttpGet("pegar-cerveja/{id}")]
+        [AllowAnonymous]
         public async Task<ActionResult<Cerveja>> GetCervejas(int id)
         {
             return await _cervejaRepository.PegarCervejaId(id);
         }
 
-        [HttpPost("CriarCerveja")]
+        [HttpPost("pegar-cervejas-filtro")]
         [AllowAnonymous]
+        public async Task<ActionResult<Cerveja>> PostCerveja([FromBody] CervejaFiltroDTO filtroCerveja)
+        {
+            var cervejasFiltradas = await _cervejaRepository.PegarCervejaFiltrada(filtroCerveja);
+            if(!cervejasFiltradas.Any())
+            {
+                return NotFound("Nenhuma cerveja encontrada!");
+            }
+            return Ok(cervejasFiltradas);
+        }
+
+        [HttpPost("criar-cerveja")]
         public async Task<ActionResult<Cerveja>> PostCerveja([FromBody] Cerveja cerveja)
         {
             var novaCerveja = await _cervejaRepository.CriarCerveja(cerveja);
             return cerveja;
         }
 
-        [HttpDelete("ExcluirCerveja/{id}")]
+        [HttpDelete("excluir-cerveja/{id}")]
         public  async Task<ActionResult<Cerveja>> Delete(int id)
         {
             var cervejaDelete = await _cervejaRepository.PegarCervejaId(id);
@@ -49,7 +61,7 @@ namespace Cervejaria.Controllers
             return NotFound();
         }
 
-        [HttpPut("EditarCerveja")]
+        [HttpPut("editar-cerveja")]
         public async Task<ActionResult<Cerveja>> PutCerveja(int id, [FromBody] Cerveja cerveja)
         {
             if(id == cerveja.id)

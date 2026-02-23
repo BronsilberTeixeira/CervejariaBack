@@ -18,6 +18,43 @@ namespace Cervejaria.Repositories
             return await _context.Cervejas.ToListAsync();
         }
 
+        public async Task<List<Cerveja>> PegarCervejaFiltrada(CervejaFiltroDTO cervejaFiltro)
+        {
+            IQueryable<Cerveja> query = _context.Cervejas.AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(cervejaFiltro.Nome))
+            {
+                query = query.Where(c => c.nome.Contains(cervejaFiltro.Nome));
+            }
+            else if(!string.IsNullOrWhiteSpace(cervejaFiltro.tipo))
+            {
+                query = query.Where(c => c.tipo == cervejaFiltro.tipo);
+            }
+            else if(cervejaFiltro.precoMinimo.HasValue && cervejaFiltro.precoMinimo > 0)
+            {
+                query = query.Where(c => c.preco >= cervejaFiltro.precoMinimo.Value);
+            }
+            else if (cervejaFiltro.precoMaximo.HasValue && cervejaFiltro.precoMaximo > 0)
+            {
+                query = query.Where(c => c.preco <= cervejaFiltro.precoMaximo.Value);
+            }
+            if (!string.IsNullOrEmpty(cervejaFiltro.OrdenarPor))
+            {
+                query = cervejaFiltro.OrdenarPor.ToLower() switch
+                {
+                    "preco" => query.OrderBy(c => c.preco),
+                    "nome" => query.OrderBy(c => c.nome),
+                    _ => query
+                };
+            }
+
+            query = query
+                .Skip((cervejaFiltro.Page - 1) * cervejaFiltro.PageSize)
+                .Take(  cervejaFiltro.PageSize);
+
+            return await query.ToListAsync();
+        }
+
         public async Task<Cerveja> CriarCerveja(Cerveja cerveja)
         {
             _context.Cervejas.Add(cerveja);

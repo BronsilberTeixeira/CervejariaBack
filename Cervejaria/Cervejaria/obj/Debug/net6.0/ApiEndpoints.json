@@ -2,7 +2,7 @@
   {
     "ContainingType": "Cervejaria.Controllers.CervejaController",
     "Method": "PostCerveja",
-    "RelativePath": "Api/Cerveja/Cerveja/CriarCerveja",
+    "RelativePath": "Api/Cerveja/Cerveja/criar-cerveja",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -28,7 +28,7 @@
   {
     "ContainingType": "Cervejaria.Controllers.CervejaController",
     "Method": "PutCerveja",
-    "RelativePath": "Api/Cerveja/Cerveja/EditarCerveja",
+    "RelativePath": "Api/Cerveja/Cerveja/editar-cerveja",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -59,7 +59,7 @@
   {
     "ContainingType": "Cervejaria.Controllers.CervejaController",
     "Method": "Delete",
-    "RelativePath": "Api/Cerveja/Cerveja/ExcluirCerveja/{id}",
+    "RelativePath": "Api/Cerveja/Cerveja/excluir-cerveja/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -85,7 +85,7 @@
   {
     "ContainingType": "Cervejaria.Controllers.CervejaController",
     "Method": "GetCervejas",
-    "RelativePath": "Api/Cerveja/Cerveja/PegarCerveja/{id}",
+    "RelativePath": "Api/Cerveja/Cerveja/pegar-cerveja/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -110,8 +110,34 @@
   },
   {
     "ContainingType": "Cervejaria.Controllers.CervejaController",
+    "Method": "PostCerveja",
+    "RelativePath": "Api/Cerveja/Cerveja/pegar-cervejas-filtro",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "filtroCerveja",
+        "Type": "Cervejaria.Models.CervejaFiltroDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Cervejaria.Models.Cerveja",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Cervejaria.Controllers.CervejaController",
     "Method": "GetCerveja",
-    "RelativePath": "Api/Cerveja/Cerveja/PegarCervejas",
+    "RelativePath": "Api/Cerveja/Cerveja/pegar-todas-cervejas",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -151,7 +177,7 @@
   {
     "ContainingType": "Cervejaria.Controllers.UsuarioController",
     "Method": "PostUsuario",
-    "RelativePath": "Api/Usuario/Usuario/CriarUsuario",
+    "RelativePath": "Api/Usuario/Usuario/criar-usuario",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -177,7 +203,7 @@
   {
     "ContainingType": "Cervejaria.Controllers.UsuarioController",
     "Method": "PutUsuario",
-    "RelativePath": "Api/Usuario/Usuario/EdiatrUsuario",
+    "RelativePath": "Api/Usuario/Usuario/editar-usuario",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -203,7 +229,7 @@
   {
     "ContainingType": "Cervejaria.Controllers.UsuarioController",
     "Method": "ExcluirUsuario",
-    "RelativePath": "Api/Usuario/Usuario/ExcluirUsuario",
+    "RelativePath": "Api/Usuario/Usuario/excluir-usuario",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -224,19 +250,14 @@
   {
     "ContainingType": "Cervejaria.Controllers.UsuarioController",
     "Method": "GetUsuario",
-    "RelativePath": "Api/Usuario/Usuario/pegarUsuario/{email}/{senha}",
+    "RelativePath": "Api/Usuario/Usuario/validar-usuario",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "email",
-        "Type": "System.String",
-        "IsRequired": true
-      },
-      {
-        "Name": "senha",
-        "Type": "System.String",
+        "Name": "loginUser",
+        "Type": "Cervejaria.Models.Enuns.LoginUserEnum",
         "IsRequired": true
       }
     ],

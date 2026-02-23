@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/Api/Cerveja/Cerveja/PegarCervejas": {
+    "/Api/Cerveja/Cerveja/pegar-todas-cervejas": {
       "get": {
         "tags": [
           "Cerveja"
@@ -43,7 +43,7 @@
         }
       }
     },
-    "/Api/Cerveja/Cerveja/PegarCerveja/{id}": {
+    "/Api/Cerveja/Cerveja/pegar-cerveja/{id}": {
       "get": {
         "tags": [
           "Cerveja"
@@ -83,7 +83,55 @@
         }
       }
     },
-    "/Api/Cerveja/Cerveja/CriarCerveja": {
+    "/Api/Cerveja/Cerveja/pegar-cervejas-filtro": {
+      "post": {
+        "tags": [
+          "Cerveja"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CervejaFiltroDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CervejaFiltroDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CervejaFiltroDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Cerveja"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Cerveja"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Cerveja"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Api/Cerveja/Cerveja/criar-cerveja": {
       "post": {
         "tags": [
           "Cerveja"
@@ -131,7 +179,7 @@
         }
       }
     },
-    "/Api/Cerveja/Cerveja/ExcluirCerveja/{id}": {
+    "/Api/Cerveja/Cerveja/excluir-cerveja/{id}": {
       "delete": {
         "tags": [
           "Cerveja"
@@ -171,7 +219,7 @@
         }
       }
     },
-    "/Api/Cerveja/Cerveja/EditarCerveja": {
+    "/Api/Cerveja/Cerveja/editar-cerveja": {
       "put": {
         "tags": [
           "Cerveja"
@@ -267,29 +315,30 @@
         }
       }
     },
-    "/Api/Usuario/Usuario/pegarUsuario/{email}/{senha}": {
+    "/Api/Usuario/Usuario/validar-usuario": {
       "get": {
         "tags": [
           "Usuario"
         ],
-        "parameters": [
-          {
-            "name": "email",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "senha",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginUserEnum"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginUserEnum"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginUserEnum"
+              }
             }
           }
-        ],
+        },
         "responses": {
           "200": {
             "description": "Success",
@@ -314,7 +363,7 @@
         }
       }
     },
-    "/Api/Usuario/Usuario/CriarUsuario": {
+    "/Api/Usuario/Usuario/criar-usuario": {
       "post": {
         "tags": [
           "Usuario"
@@ -362,7 +411,7 @@
         }
       }
     },
-    "/Api/Usuario/Usuario/EdiatrUsuario": {
+    "/Api/Usuario/Usuario/editar-usuario": {
       "put": {
         "tags": [
           "Usuario"
@@ -410,7 +459,7 @@
         }
       }
     },
-    "/Api/Usuario/Usuario/ExcluirUsuario": {
+    "/Api/Usuario/Usuario/excluir-usuario": {
       "delete": {
         "tags": [
           "Usuario"
@@ -467,6 +516,56 @@
           "preco": {
             "type": "number",
             "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CervejaFiltroDTO": {
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipo": {
+            "type": "string",
+            "nullable": true
+          },
+          "precoMinimo": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "precoMaximo": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "page": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ordenarPor": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginUserEnum": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "senha": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

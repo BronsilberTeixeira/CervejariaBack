@@ -27,7 +27,7 @@ namespace Cervejaria.Controllers {
             return await _usuarioRepository.PegarTodosUsuarios();
         }
 
-        [HttpGet("pegarUsuario")]
+        [HttpGet("validar-usuario")]
         [AllowAnonymous]
         public async Task<ActionResult<Usuario>> GetUsuario([FromBody] LoginUserEnum loginUser)
         {
@@ -75,7 +75,7 @@ namespace Cervejaria.Controllers {
             });
         }
 
-        [HttpPost("CriarUsuario")]
+        [HttpPost("criar-usuario")]
         [AllowAnonymous]
         public async Task<ActionResult<Usuario>> PostUsuario([FromBody] Usuario usuario)
         {
@@ -91,7 +91,7 @@ namespace Cervejaria.Controllers {
             return CreatedAtAction(nameof(GetUsuario), new { id = novoUsuario.Id }, novoUsuario);
         }
 
-        [HttpPut("EdiatrUsuario")]
+        [HttpPut("editar-usuario")]
         public async Task<ActionResult<Usuario>> PutUsuario([FromBody] Usuario usuario)
         {
             var usuarioExistente = await _usuarioRepository.PegarUsuarioPorId(usuario.Id);
@@ -111,7 +111,7 @@ namespace Cervejaria.Controllers {
             return NoContent();
         }
 
-        [HttpDelete("ExcluirUsuario")]
+        [HttpDelete("excluir-usuario")]
         public async Task<ActionResult> ExcluirUsuario(string email, string senha)
         {
             var senhaCriptografada = HashSenha(senha);

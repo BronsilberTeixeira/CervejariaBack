@@ -6,6 +6,7 @@ namespace Cervejaria.Repositories
     {
         Task<IEnumerable<Cerveja>> PegarTodasCerverjas();
         Task<Cerveja> PegarCervejaId(int id);
+        Task<List<Cerveja>> PegarCervejaFiltrada(CervejaFiltroDTO cervejaFiltroDTO);
         Task<Cerveja> CriarCerveja(Cerveja cerveja);
         Task EditarCerveja(Cerveja cerveja);
         Task ExcluirCerveja(int id);
