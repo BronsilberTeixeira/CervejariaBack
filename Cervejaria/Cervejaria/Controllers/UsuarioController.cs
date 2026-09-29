@@ -16,9 +16,11 @@ namespace Cervejaria.Controllers {
     public class UsuarioController : ControllerBase
     {
         private readonly IUsuarioRepository _usuarioRepository;
-        public UsuarioController(IUsuarioRepository usuarioRepository)
+        private readonly IConfiguration _configuration;
+        public UsuarioController(IUsuarioRepository usuarioRepository, IConfiguration configuration)
         {
             _usuarioRepository = usuarioRepository;
+            _configuration = configuration;
         }
 
         [HttpGet]
@@ -44,7 +46,7 @@ namespace Cervejaria.Controllers {
 
             // ✅ Gera o token JWT
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes("chave-super-secreta-12345"); // use uma chave forte e segura
+            var key = Encoding.ASCII.GetBytes(_configuration["Jwt:Key"]!);
 
             var tokenDescriptor = new SecurityTokenDescriptor
             {

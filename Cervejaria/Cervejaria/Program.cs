@@ -11,8 +11,14 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        var key = Encoding.ASCII.GetBytes("chave-super-secreta-12345");
         var builder = WebApplication.CreateBuilder(args);
+        // Segredos locais (fora do git); veja appsettings.Local.example.json
+        builder.Configuration.AddJsonFile("appsettings.Local.json", optional: true, reloadOnChange: true);
+
+        var jwtKey = builder.Configuration["Jwt:Key"];
+        if (string.IsNullOrWhiteSpace(jwtKey))
+            throw new InvalidOperationException("Jwt:Key não configurada. Crie o appsettings.Local.json a partir do appsettings.Local.example.json.");
+        var key = Encoding.ASCII.GetBytes(jwtKey);
 
         // Add services to the container.
 
