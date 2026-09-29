@@ -9,8 +9,8 @@ namespace Cervejaria.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
 
-        private string _nome;
-        public string nome { get => _nome; set => _nome.ToUpper(); }
+        private string _nome = string.Empty;
+        public string nome { get => _nome; set => _nome = value?.ToUpper() ?? string.Empty; }
 
         public string tipo { get; set; }
 

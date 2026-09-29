@@ -1,6 +1,7 @@
 ﻿using Cervejaria.Context;
 using Cervejaria.Models;
 using Microsoft.EntityFrameworkCore;
+using Cervejaria.Extensions;
 
 namespace Cervejaria.Repositories
 {
@@ -18,41 +19,25 @@ namespace Cervejaria.Repositories
             return await _context.Cervejas.ToListAsync();
         }
 
-        public async Task<List<Cerveja>> PegarCervejaFiltrada(CervejaFiltroDTO cervejaFiltro)
+        public async Task<List<Cerveja>> PegarCervejaFiltrada(CervejaFiltroDTO f)
         {
-            IQueryable<Cerveja> query = _context.Cervejas.AsQueryable();
+            var query = _context.Cervejas
+                .WhereIf(!string.IsNullOrWhiteSpace(f.Nome), c => c.nome.Contains(f.Nome!))
+                .WhereIf(!string.IsNullOrWhiteSpace(f.Tipo), c => c.tipo == f.Tipo)
+                .WhereIf(f.PrecoMinimo > 0, c => c.preco >= f.PrecoMinimo!.Value)
+                .WhereIf(f.PrecoMaximo > 0, c => c.preco <= f.PrecoMaximo!.Value);
 
-            if (!string.IsNullOrWhiteSpace(cervejaFiltro.Nome))
+            query = f.OrdenarPor?.ToLower() switch
             {
-                query = query.Where(c => c.nome.Contains(cervejaFiltro.Nome));
-            }
-            else if(!string.IsNullOrWhiteSpace(cervejaFiltro.tipo))
-            {
-                query = query.Where(c => c.tipo == cervejaFiltro.tipo);
-            }
-            else if(cervejaFiltro.precoMinimo.HasValue && cervejaFiltro.precoMinimo > 0)
-            {
-                query = query.Where(c => c.preco >= cervejaFiltro.precoMinimo.Value);
-            }
-            else if (cervejaFiltro.precoMaximo.HasValue && cervejaFiltro.precoMaximo > 0)
-            {
-                query = query.Where(c => c.preco <= cervejaFiltro.precoMaximo.Value);
-            }
-            if (!string.IsNullOrEmpty(cervejaFiltro.OrdenarPor))
-            {
-                query = cervejaFiltro.OrdenarPor.ToLower() switch
-                {
-                    "preco" => query.OrderBy(c => c.preco),
-                    "nome" => query.OrderBy(c => c.nome),
-                    _ => query
-                };
-            }
+                "preco" => query.OrderBy(c => c.preco).ThenBy(c => c.id),
+                "nome" => query.OrderBy(c => c.nome).ThenBy(c => c.id),
+                _ => query.OrderBy(c => c.nome).ThenBy(c => c.id)
+            };
 
-            query = query
-                .Skip((cervejaFiltro.Page - 1) * cervejaFiltro.PageSize)
-                .Take(  cervejaFiltro.PageSize);
-
-            return await query.ToListAsync();
+            return await query
+                .Skip((f.Page - 1) * f.PageSize)
+                .Take(f.PageSize)
+                .ToListAsync<Cerveja>();
         }
 
         public async Task<Cerveja> CriarCerveja(Cerveja cerveja)
